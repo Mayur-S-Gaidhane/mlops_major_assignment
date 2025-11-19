@@ -1,0 +1,11 @@
+name: mlops_major
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - scikit-learn
+  - joblib
+  - pip: []
