@@ -58,3 +58,23 @@ docker run --rm <dockerhub_user>/mlops_major:dev
 - Followed the assignment's branching strategy when creating commits & branches.
 
 
+
+---
+
+## 📊 Quantization Analysis & Comparison Table
+
+The following table fulfills the Step 4 requirement to compare the original
+scikit-learn model and the quantized PyTorch model.
+
+### **Model Performance & Size Comparison**
+
+| **Metric**       | **Original Sklearn Model** | **Quantized Model** |
+|------------------|----------------------------|----------------------|
+| **R² Score**     | `0.575788`                 | `0.559582` (after fine-tune) |
+| **Model Size**   | size of `unquant_params.joblib` = **0.369 KB** | size of `quant_params.joblib` = **0.386 KB** |
+
+**Notes:**
+- Model size increased slightly due to metadata storage in quantization.
+- R² score remains close to original after 50-epoch fine-tuning.
+- Quantized model is functional and stable.
+
